@@ -1,0 +1,2 @@
+# cmd needs CRLF: an LF-only batch file can lose its goto labels.
+*.bat text eol=crlf

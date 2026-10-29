@@ -66,6 +66,21 @@ make start     # → open http://127.0.0.1:8090/
 
 **Prerequisites:** [Rust](https://rustup.rs/), `make`, `curl`, `unzip`, and a bash shell. On Windows, run everything from Git Bash; PowerShell and cmd can't run the scripts.
 
+### Windows: one click
+
+Double-click **`build-windows.bat`**. It installs what is missing (the Visual Studio C++ build
+tools and Rust, through `winget`), downloads the game data once, builds the desktop game, and puts
+everything to play into one folder you can move anywhere:
+
+```
+Azeroth Survivors\
+  warcraft-survivors.exe
+  Data\                  the WoW 1.12.1 MPQs
+```
+
+Run it again after an update: a git checkout pulls, and only the game is rebuilt (a few minutes).
+`build-windows.bat "F:\Games\Azeroth Survivors"` builds into another folder.
+
 Run `make` (or `make help`) to list every target.
 
 ## Discord status (optional, desktop build)
