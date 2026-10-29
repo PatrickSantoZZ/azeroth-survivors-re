@@ -68,6 +68,19 @@ make start     # → open http://127.0.0.1:8090/
 
 Run `make` (or `make help`) to list every target.
 
+## Discord status (optional, desktop build)
+
+The desktop build can show your run on your Discord profile: class, level, kills, bosses and the
+battleground, with a running clock. It talks to the Discord app on your own PC and is off unless
+you give it an application id. Bring your own, as nobody else's id is shipped:
+
+1. At [discord.com/developers/applications](https://discord.com/developers/applications), create
+   a **New Application** named `Azeroth Survivors` (the name is the "Playing …" line).
+2. Under **Rich Presence → Art Assets**, upload an image with the key `logo`;
+   [docs/discord-icon.png](docs/discord-icon.png) is one you can use.
+3. Copy the **Application ID** into a file `discord-app-id.txt` beside the game's executable
+   (git-ignored), or set `DISCORD_APP_ID` instead.
+
 ## Controls
 
 See [CONTROLS.md](CONTROLS.md). The short version: **WASD** to move, **Space** to jump, **F**

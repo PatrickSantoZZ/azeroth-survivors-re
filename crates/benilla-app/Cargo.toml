@@ -82,6 +82,8 @@ rand = "0.8"
 # arboard has no wasm32 backend (`textinput/clipboard.rs` falls back to no pasteboard there).
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 arboard = "3"
+# The survivors mode's Discord status (`survivors/discord.rs`), over the local Discord client's IPC.
+discord-rich-presence = "1.1"
 
 # Wayland clipboard over the standard `wl_data_device`; arboard's speaks `wlr-data-control`,
 # which GNOME does not implement.

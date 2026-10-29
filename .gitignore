@@ -13,6 +13,11 @@
 /WoW
 # Fetched by scripts/fetch-data.sh (archive.org) — the client's Data folder, not redistributed.
 /wow-data
+# A local play folder: the player binary beside the client's Data folder.
+/Azeroth Survivors/
+
+# Each player's own Discord application id (survivors/discord.rs), beside the binary.
+discord-app-id.txt
 # Cached / extracted assets derived from the user's install.
 /extracted/
 /out/
