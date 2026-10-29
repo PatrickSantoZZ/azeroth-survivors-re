@@ -184,6 +184,7 @@ fn worker(app_id: &str, rx: mpsc::Receiver<Presence>) {
             if c.connect().is_err() {
                 continue;
             }
+            info!("discord status: connected to the Discord client");
             client = Some(c);
         }
         let c = client.as_mut().expect("connected above");
@@ -201,6 +202,7 @@ fn worker(app_id: &str, rx: mpsc::Receiver<Presence>) {
         if c.set_activity(payload).is_ok() {
             pending = None;
         } else {
+            info!("discord status: the Discord client went away; retrying");
             let _ = c.close();
             client = None;
         }
